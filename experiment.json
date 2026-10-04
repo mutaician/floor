@@ -1,0 +1,36 @@
+{
+  "project": "Floor",
+  "seed": 42,
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "renderer": "qwen3_disable_thinking",
+    "lora_rank": 16,
+    "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "sdk_version": "0.32.0",
+    "cookbook_version": "0.5.7"
+  },
+  "sampling": {
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "max_new_tokens": 160,
+    "generation_seed": 42
+  },
+  "training": {
+    "learning_rate": 0.0001,
+    "batch_size": 32,
+    "max_epochs": 1,
+    "max_rendered_tokens": 768,
+    "lora_rank": 16
+  },
+  "data": {
+    "existing_dataset": "stanfordnlp/craigslist_bargains",
+    "synthetic_generator": "gpt-6-luna subagents",
+    "holdout": "separate message families, dialogue IDs and generated scenarios"
+  },
+  "policy": "asking is desired net price; minimum is private net floor. With full payment and known seller cost: accept when net >= asking; counter halfway up from net to asking (rounded up) when minimum <= net < asking; counter asking plus seller cost when net < minimum. Clarify deposits/instalments/ambiguous costs/questions. Never disclose the private minimum.",
+  "budget": {
+    "currency": "USD",
+    "ceiling": 5,
+    "stop_scheduling_at": 4.5
+  }
+}

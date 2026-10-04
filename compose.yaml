@@ -1,0 +1,16 @@
+services:
+  floor:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    env_file: .env
+    environment:
+      FLOOR_STATE_DIR: /data
+      FLOOR_DESK_DB: /data/floor.sqlite3
+      PORT: "8000"
+    volumes:
+      - floor-state:/data
+    restart: unless-stopped
+
+volumes:
+  floor-state:

@@ -1,0 +1,13 @@
+**
+!app.py
+!floor.py
+!experiment.json
+!pyproject.toml
+!uv.lock
+!.python-version
+!scripts/
+!scripts/*.py
+!prompts/
+!prompts/*.json
+!static/
+!static/**
