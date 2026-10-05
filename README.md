@@ -10,6 +10,8 @@ Floor gives the seller one place to keep those conversations and a second pair o
 
 ![Floor seller inbox with a sample conversation and suggested reply](docs/screenshot.png)
 
+[Watch the 28-second sample inbox walkthrough](https://raw.githubusercontent.com/mutaician/floor/main/docs/demo.mp4).
+
 ## What you can do
 
 - Save your listing, asking price, private price floor, condition, collection location, delivery cost, and availability.
